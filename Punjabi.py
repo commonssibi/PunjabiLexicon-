@@ -15,7 +15,7 @@ base_url = "http://dsalsrv02.uchicago.edu/cgi-bin/philologic/getobject.pl?p."
 
 for letter in range(0,4):
     for index in range (0,400):
-         print program_url
+         program_url =  base_url+str(letter)+":"+str(index)+".singh"
          x = urllib.urlopen(program_url).read()
          soup = BeautifulSoup(x)
          span = soup.findAll('div2' , {"type" : "article"})
